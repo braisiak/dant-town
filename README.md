@@ -28,6 +28,7 @@ If you want to play you must have installed **Python 3.8.1 and colorama**.
 
 **Checking your Python version:**
 1. Open command prompt and type: python --version
+
 If you want to play you should have installed Python 3.8.1
 
 **Installing colorma:**
