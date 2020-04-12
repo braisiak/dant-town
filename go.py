@@ -1,0 +1,15 @@
+g1 = "Go to: [n] north, [s] south, [w] west, [e] east" #every directions
+g2 = "Go to: [n] north, [s] south, [w] west" #directions without way to east
+g3 = "Go to: [n] north, [s] south, [e] east" #directions without way to west
+g4 = "Go to: [n] north, [w] west, [e] east" #directions without way to south
+g5 = "Go to: [s] south, [w] west, [e] east" #directions without way to north
+g6 = "Go to: [n] north, [s] south" #north, south
+g7 = "Go to: [w] west, [e] east" #west, east
+g8 = "Go to: [n] north, [w] west" #north, west
+g9 = "Go to: [n] north, [e] east" #north, east
+g10 = "Go to: [s] south, [w] west" #south, west
+g12 = "Go to: [s] south, [e] east" #south, east
+g13 = "Go to: [n] north" #north
+g14 = "Go to: [s] south" #south
+g15 = "Go to: [w] west" #west
+g16 = "Go to: [e] east" #east
