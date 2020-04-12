@@ -178,7 +178,7 @@ def dorm():
             choice() 
     choice()
  
-aa = Place("\nArena\n", location.arn, go.g15)
+aa = Place("\nArena\n", location.arn, go.g8)
     
 def arena():
     print(Fore.YELLOW + aa.name)
