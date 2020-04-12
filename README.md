@@ -31,7 +31,7 @@ If you want to play you must have installed **Python 3.8.1 and colorama**.
 If you want to play you should have installed Python 3.8.1
 
 **Installing colorma:**
-You can install it yourself reading [this site.](https://pypi.org/project/colorama/)
+You can install it yourself reading [this site](https://pypi.org/project/colorama/)
 or with my tutorial:
 1. Open command prompt and type: pip install colorama
 It's everything
