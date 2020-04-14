@@ -48,7 +48,11 @@ For example: If you want to go north you should type: n
 ## Commands
 
 n - north
+
 s - south
+
 w - west
+
 e - east
+
 eq - inventory
