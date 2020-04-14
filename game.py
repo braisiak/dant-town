@@ -6,8 +6,16 @@ from colorama import init
 from colorama import Fore, Back, Style
 init()
 
-class Place:
+class Weapon:
+    def __init__(self, name, attack):
+        self.name = name
+        self.attack = attack
 
+sword = Weapon("Sword", 85)
+knife = Weapon("Knife", 16)
+equipment = {sword.name: sword.attack, knife.name: knife.attack}
+
+class Place:
     def __init__(self, name, description, way):
         self.name = name
         self.description = description
@@ -19,6 +27,7 @@ def mainsquare():
     print(Fore.YELLOW + mnse.name)
     print(Fore.WHITE + mnse.description)
     print(Fore.CYAN + mnse.way + Style.RESET_ALL)
+    # equipment["Apple"] = 10 - adding new items to dictionary (don't ask)
 
     def choice():
         where = input()
@@ -28,6 +37,12 @@ def mainsquare():
             industrialdistrict()
         if where == "e":
             residentdistrict()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice()
@@ -46,6 +61,12 @@ def residentdistrict():
             mainsquare()
         if where == "e":
             market()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice()
@@ -64,6 +85,12 @@ def market():
             residentdistrict()
         if where == "n":
             thievesguild()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice()
@@ -80,6 +107,12 @@ def thievesguild():
         where = input()
         if where == "s":
             market()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice()
@@ -102,6 +135,12 @@ def industrialdistrict():
             uresidentdistrict()
         if where == "e":
             tunnel()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -122,6 +161,12 @@ def tunnel():
             industrialdistrict()
         if where == "e":
             smithy()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -140,6 +185,12 @@ def tunnel1():
             tunnel()
         if where == "e":
             dorm()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -157,6 +208,12 @@ def smithy():
         where = input()
         if where == "w":
             tunnel()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -173,6 +230,12 @@ def dorm():
         where = input()
         if where == "w":
             tunnel1()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -193,6 +256,12 @@ def arena():
             industrialdistrict()
         if where == "w":
             trainingground()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -211,6 +280,12 @@ def trainingground():
         where = input()
         if where == "e":
             arena()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -230,6 +305,12 @@ def uresidentdistrict():
             cave()
         if where == "e":
             industrialdistrict()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -248,6 +329,12 @@ def cave():
             cave1()
         if where == "s":
             uresidentdistrict()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -264,6 +351,12 @@ def cave1():
         where = input()
         if where == "s":
             cave()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -282,6 +375,12 @@ def townhall():
             mainsquare()
         if where == "e":
             bank()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
@@ -299,10 +398,16 @@ def bank():
         where = input()
         if where == "w":
             townhall()
+        if where == "eq":
+            print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
+            for item in equipment:
+                print(item, end=" ")
+                print(equipment[item])
+            choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
             choice() 
     choice()
-        
+
 mainsquare()
 
