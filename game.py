@@ -7,13 +7,16 @@ from colorama import Fore, Back, Style
 init()
 
 class Weapon:
-    def __init__(self, name, attack):
+    def __init__(self, name):
         self.name = name
-        self.attack = attack
 
-sword = Weapon("Sword", 85)
-knife = Weapon("Knife", 16)
-equipment = {sword.name: sword.attack, knife.name: knife.attack}
+sword = Weapon("Sword")
+knife = Weapon("Knife")
+shield = Weapon("Shield")
+goldensword = Weapon("Golden Sword")
+
+equipment = [sword.name, knife.name]
+assortment = [shield.name, goldensword.name]
 
 class Place:
     def __init__(self, name, description, way):
@@ -40,8 +43,7 @@ def mainsquare():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -64,8 +66,7 @@ def residentdistrict():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -88,8 +89,7 @@ def market():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -110,8 +110,7 @@ def thievesguild():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -138,8 +137,7 @@ def industrialdistrict():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -164,8 +162,7 @@ def tunnel():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -188,8 +185,7 @@ def tunnel1():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -211,8 +207,24 @@ def smithy():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
+            choice()
+        if where == "stock":
+            print(Fore.YELLOW + "Smith stock:" + Style.RESET_ALL)
+            for thing in assortment:
+                print(thing)
+            print(Fore.BLUE + "If you want to buy anything from smith, type: buy item name")
+            print("e.g. buy shield" + Style.RESET_ALL)
+            choice()
+        if where == "buy shield":
+            equipment.append(shield.name)
+            assortment.remove(shield.name)
+            print("You bought {}!".format(shield.name))
+            choice()
+        if where == "buy golden sword":
+            equipment.append(goldensword.name)
+            assortment.remove(goldensword.name)
+            print("You bought {}!".format(goldensword.name))
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -233,8 +245,7 @@ def dorm():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -259,8 +270,7 @@ def arena():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -283,8 +293,7 @@ def trainingground():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -308,8 +317,7 @@ def uresidentdistrict():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -332,8 +340,7 @@ def cave():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -354,8 +361,7 @@ def cave1():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -378,8 +384,7 @@ def townhall():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
@@ -401,8 +406,7 @@ def bank():
         if where == "eq":
             print(Fore.YELLOW + "Equipment:" + Style.RESET_ALL)
             for item in equipment:
-                print(item, end=" ")
-                print(equipment[item])
+                print(item)
             choice()
         else:
             print(Fore.RED + "You cannot go there or no such command exists." + Style.RESET_ALL)
