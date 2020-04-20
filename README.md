@@ -8,11 +8,11 @@ If you want you can test it or add something from yourself.
 
 ## Project Status
 
-v0.1 - You can walk around 16 locations
+v0.2 - You can walk around 16 locations and check your inventory
 
 ## Things I want to add
 
-- equipment
+- equipment (Done)
 - buying items in store
 - fighting in the arena
 - player statistics like hp, gold, lvl
@@ -44,3 +44,15 @@ When you have already installed Python and colorama you can open file game.py an
 
 If you want to go anywhere you must type the letter of the direction what you want.
 For example: If you want to go north you should type: n
+
+## Commands
+
+n - north
+
+s - south
+
+w - west
+
+e - east
+
+eq - inventory
