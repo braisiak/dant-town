@@ -8,7 +8,7 @@ If you want you can test it or add something from yourself.
 
 ## Project Status
 
-v0.2 - You can walk around 16 locations and check your inventory
+v0.3 - You can walk around 16 locations, check your inventory and buy items from smith
 
 ## Things I want to add
 
